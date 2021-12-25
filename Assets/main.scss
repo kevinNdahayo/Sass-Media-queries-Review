@@ -1,0 +1,66 @@
+// colors used in the design
+$color-1: #cdb4db; //Mobile
+$color-2: #fff1e6; // Tablet
+$color-3: #52b788; // Laptop
+$color-4: #bee1e6; // Desktop
+
+// breakpoints
+$mobile: 576px;
+$tablet: 768px;
+$laptop: 992px;
+$desktop: 1200px;
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: sans-serif;
+  font-size: 35px;
+  background-color: #fff;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  place-content: center center;
+}
+
+#size {
+  color: red;
+}
+
+// Media query for the Desktop version
+@media (max-width: $desktop) {
+  .container {
+    background: $color-4;
+  }
+}
+
+// Media query for the laptop version
+@media (max-width: $laptop) {
+  .container {
+    background: $color-3;
+  }
+}
+
+// Media query for the tablet version
+@media (max-width: $tablet) {
+  .container {
+    background: $color-2;
+  }
+}
+
+//  Media queries for the mobile version
+@media (max-width: $mobile) {
+  .container {
+    background: $color-1;
+  }
+}
